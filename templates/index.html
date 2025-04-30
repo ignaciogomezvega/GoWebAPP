@@ -1,0 +1,35 @@
+{{ template "base" . }}
+
+{{define "title"}} Desafiá a MegaBot - Inicio {{end}}
+{{define "content"}}
+
+<section class="container py-5">
+    <h1 class="display-4 fw-bold by-3 text-center">Bienvenido a Piedra, Papel o Tijera</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="static/img/rock_icon_v3.png" alt="rock_icon" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="static/img/paper_icon_v2.png" alt="rock_icon" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="static/img/scissors_icon_v2.png" alt="rock_icon" class="img-fluid">
+        </div>
+    </div>
+    <p class=""lead texr-center fs-2 py-4></p>
+    <p class="text-center">
+        <a href="/new" class="btn btn-success btn-lg"> Nuevo juego</a>
+    </p>
+</section>
+
+<section class="container py-5">
+    <h2 class="mb-4">¿Cómo se juega?</h2>
+    <ol>
+        <ol class="list-group list-group-numbered"></ol>
+        <li class="list-group-item">Crear un Juego nuevo.</li>
+        <li class="list-group-item">Ingrese su nombre</li>
+        <li class="list-group-item">Empiece a jugar.</li>
+    </ol>
+</section>
+
+{{end}}
