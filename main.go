@@ -4,6 +4,7 @@ import (
 	"GoWebApp/handlers"
 	"log"
 	"net/http"
+	"os" 
 )
 
 func main() {
@@ -19,7 +20,10 @@ func main() {
 	router.HandleFunc("/play", handlers.Play)
 	router.HandleFunc("/about", handlers.About)
 
-	port := ":8080"
-	log.Printf("Servidor escuchando en http://localhost%s\n", port)
-	log.Fatal(http.ListenAndServe(port, router))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" 
+	}
+	log.Printf("Servidor escuchando en http://localhost:%s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
